@@ -1,4 +1,4 @@
-baseURL = 'https://djburkhart.github.io/'
+baseURL = 'https://danielburkhart.com/'
 locale = 'en-us'
 title = 'Daniel J. Burkhart'
 theme = 'terminal-portfolio'
