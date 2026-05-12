@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="terminal-container">
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="terminal-button close"></span>
+            <span class="terminal-button minimize"></span>
+            <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">{{ .Site.Params.terminalTitle | default "terminal@danielburkhart" }}</div>
+    </div>
+
+    <div class="terminal-body" id="terminal">
+        <div class="terminal-welcome">
+            <pre class="ascii-art">{{ .Site.Params.asciiArt | default `
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║   ██████╗  █████╗ ███╗   ██╗██╗███████╗██╗                          ║
+║   ██╔══██╗██╔══██╗████╗  ██║██║██╔════╝██║                          ║
+║   ██║  ██║███████║██╔██╗ ██║██║█████╗  ██║                          ║
+║   ██║  ██║██╔══██║██║╚██╗██║██║██╔══╝  ██║                          ║
+║   ██████╔╝██║  ██║██║ ╚████║██║███████╗███████╗                     ║
+║   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚══════╝                     ║
+║                                                                      ║
+║   ██████╗ ██╗   ██╗██████╗ ██╗  ██╗██╗  ██╗ █████╗ ██████╗ ████████╗
+║   ██╔══██╗██║   ██║██╔══██╗██║ ██╔╝██║  ██║██╔══██╗██╔══██╗╚══██╔══╝
+║   ██████╔╝██║   ██║██████╔╝█████╔╝ ███████║███████║██████╔╝   ██║
+║   ██╔══██╗██║   ██║██╔══██╗██╔═██╗ ██╔══██║██╔══██║██╔══██╗   ██║
+║   ██████╔╝╚██████╔╝██║  ██║██║  ██╗██║  ██║██║  ██║██║  ██║   ██║
+║   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+` }}</pre>
+            <p class="welcome-text">{{ .Site.Params.welcomeText | default "Welcome to my terminal portfolio. Type 'help' for available commands." }}</p>
+        </div>
+
+        <div id="terminal-output"></div>
+
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">{{ .Site.Params.prompt | default "visitor@danielburkhart.com:~$" }}</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autofocus>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-info">
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+    <div class="mobile-links">
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+    </div>
+</div>
+{{ end }}

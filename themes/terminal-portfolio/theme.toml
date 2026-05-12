@@ -1,0 +1,11 @@
+name = "Terminal Portfolio"
+license = "MIT"
+licenselink = "https://github.com/danielburkhart/terminal-portfolio/blob/main/LICENSE"
+description = "A terminal/command-line themed portfolio for developers"
+tags = ["portfolio", "terminal", "developer", "command-line", "minimal"]
+features = ["terminal interface", "interactive commands", "responsive"]
+min_version = "0.100.0"
+
+[author]
+  name = "Daniel J. Burkhart"
+  homepage = "https://danielburkhart.com"

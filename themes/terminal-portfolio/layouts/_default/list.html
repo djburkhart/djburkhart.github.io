@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="terminal-container page">
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="terminal-button close"></span>
+            <span class="terminal-button minimize"></span>
+            <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">{{ .Title }} - danielburkhart.com</div>
+    </div>
+
+    <div class="terminal-body page-content">
+        <div class="terminal-nav">
+            <span class="nav-prompt">visitor@danielburkhart:~$</span>
+            <span class="nav-command">ls -la {{ lower .Title }}/</span>
+            <a href="/" class="nav-home">[↩ return to terminal]</a>
+        </div>
+
+        <div class="directory-header">
+            <pre class="directory-info">
+total {{ len .Pages }}
+drwxr-xr-x  {{ len .Pages }} daniel  staff  {{ mul (len .Pages) 4096 }}  {{ .Date.Format "Jan 2 15:04" }}  .
+drwxr-xr-x    5 daniel  staff      160  {{ now.Format "Jan 2 15:04" }}  ..
+            </pre>
+        </div>
+
+        {{ if .Content }}
+        <div class="content markdown-body">
+            {{ .Content }}
+        </div>
+        {{ end }}
+
+        <div class="post-list">
+            {{ range .Pages }}
+            <article class="post-entry">
+                <div class="post-header">
+                    <div class="post-permissions">
+                        <span class="perm">-rw-r--r--</span>
+                        <span class="owner">daniel</span>
+                        <span class="date">{{ .Date.Format "Jan 2 15:04" }}</span>
+                    </div>
+                    <div class="post-meta-tags">
+                        {{ if .Params.tags }}
+                        {{ range .Params.tags }}
+                        <span class="tag">#{{ . }}</span>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+                <h2 class="post-title">
+                    <span class="file-icon">📄</span>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+                {{ if .Summary }}
+                <div class="post-summary">
+                    <span class="summary-marker">»</span>
+                    <p>{{ .Summary }}</p>
+                </div>
+                {{ end }}
+                <div class="post-stats">
+                    <span class="stat">{{ .WordCount }} words</span>
+                    <span class="stat">~{{ .ReadingTime }} min read</span>
+                    <a href="{{ .RelPermalink }}" class="read-more">read more →</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        <div class="directory-footer">
+            <p class="file-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}file{{ else }}files{{ end }} listed</p>
+        </div>
+
+        <div class="page-footer">
+            <div class="footer-prompt">
+                <span class="prompt">visitor@danielburkhart:~$</span>
+                <span class="command">cd /</span>
+            </div>
+            <p><a href="/">Return to terminal</a> to explore more with commands</p>
+        </div>
+    </div>
+</div>
+{{ end }}

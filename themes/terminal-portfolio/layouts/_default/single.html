@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="terminal-container page">
+    <div class="terminal-header">
+        <div class="terminal-buttons">
+            <span class="terminal-button close"></span>
+            <span class="terminal-button minimize"></span>
+            <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">{{ .Title }} - danielburkhart.com</div>
+    </div>
+
+    <div class="terminal-body page-content">
+        <div class="terminal-nav">
+            <span class="nav-prompt">visitor@danielburkhart:~$</span>
+            <span class="nav-command">cat {{ .File.Path | default .Title }}</span>
+            <a href="/" class="nav-home">[↩ return to terminal]</a>
+        </div>
+
+        <div class="file-header">
+            <div class="file-info">
+                <span class="file-name">{{ .File.Path | default (lower .Title) }}.md</span>
+                {{ if .Date }}
+                <span class="file-date">{{ .Date.Format "2006-01-02 15:04:05" }}</span>
+                {{ end }}
+                {{ if .WordCount }}
+                <span class="file-size">{{ .WordCount }} words</span>
+                {{ end }}
+            </div>
+            {{ if .Params.tags }}
+            <div class="file-tags">
+                {{ range .Params.tags }}
+                <span class="tag">#{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="content markdown-body">
+            {{ .Content }}
+        </div>
+
+        {{ if or .NextInSection .PrevInSection }}
+        <div class="page-navigation">
+            <div class="nav-section">
+                {{ with .PrevInSection }}
+                <a href="{{ .RelPermalink }}" class="nav-link prev">
+                    <span class="nav-arrow">←</span>
+                    <div class="nav-details">
+                        <span class="nav-label">Previous</span>
+                        <span class="nav-title">{{ .Title }}</span>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+            <div class="nav-section">
+                {{ with .NextInSection }}
+                <a href="{{ .RelPermalink }}" class="nav-link next">
+                    <div class="nav-details">
+                        <span class="nav-label">Next</span>
+                        <span class="nav-title">{{ .Title }}</span>
+                    </div>
+                    <span class="nav-arrow">→</span>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+        <div class="page-footer">
+            <div class="footer-prompt">
+                <span class="prompt">visitor@danielburkhart:~$</span>
+                <span class="command">cd /</span>
+            </div>
+            <p><a href="/">Return to terminal</a> to explore more with commands</p>
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,34 @@
+baseURL = 'https://danielburkhart.com/'
+locale = 'en-us'
+title = 'Daniel J. Burkhart'
+theme = 'terminal-portfolio'
+
+[params]
+  description = "AI Development Specialist | Founder of Resolvora LLC | Creator of ForwardCast Project Management"
+  author = "Daniel J. Burkhart"
+  email = "me@danielburkhart.com"
+  terminalTitle = "daniel@burkhart ~ terminal"
+  prompt = "visitor@danielburkhart:~$"
+
+  github = "https://github.com/djburkhart"
+  linkedin = "https://www.linkedin.com/in/danieljamesburkhart/"
+  twitter = "https://x.com/DannyBurkhart"
+
+  welcomeText = """Welcome to my terminal portfolio. I'm Daniel Burkhart, an AI Development Specialist and Founder of Resolvora LLC.
+Type 'help' to see available commands or explore using terminal commands like 'about', 'projects', 'blog', and 'contact'."""
+
+  asciiArt = """
+  ██████╗  █████╗ ███╗   ██╗██╗███████╗██╗         ██████╗ ██╗   ██╗██████╗ ██╗  ██╗██╗  ██╗ █████╗ ██████╗ ████████╗
+  ██╔══██╗██╔══██╗████╗  ██║██║██╔════╝██║         ██╔══██╗██║   ██║██╔══██╗██║ ██╔╝██║  ██║██╔══██╗██╔══██╗╚══██╔══╝
+  ██║  ██║███████║██╔██╗ ██║██║█████╗  ██║         ██████╔╝██║   ██║██████╔╝█████╔╝ ███████║███████║██████╔╝   ██║
+  ██║  ██║██╔══██║██║╚██╗██║██║██╔══╝  ██║         ██╔══██╗██║   ██║██╔══██╗██╔═██╗ ██╔══██║██╔══██║██╔══██╗   ██║
+  ██████╔╝██║  ██║██║ ╚████║██║███████╗███████╗    ██████╔╝╚██████╔╝██║  ██║██║  ██╗██║  ██║██║  ██║██║  ██║   ██║
+  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
+
+           ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+           │  AI Development Specialist  │  Founder @ Resolvora LLC  │  Creator of ForwardCast            │
+           └────────────────────────────────────────────────────────────────────────────────────────────────┘
+"""
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
