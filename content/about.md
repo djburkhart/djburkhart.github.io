@@ -7,15 +7,15 @@ draft: false
 ## 👋 Hi, I'm Daniel
 
 **In Plain English:**  
-I build software that uses artificial intelligence to solve real-world problems. Think of me as someone who teaches computers to make smart decisions—like predicting when a project will finish, understanding written text, or recognizing patterns in data.
+I build software that uses artificial intelligence to solve real-world problems. Think of me as someone who teaches computers to make smart decisions—like predicting when a project will finish, understanding written text, or analyzing security configurations.
 
-I founded a company called **Resolvora LLC** where we create business software powered by AI. Our flagship product, **ForwardCast**, helps teams manage projects more effectively by predicting deadlines and spotting problems before they happen.
+I founded a company called **Resolvora LLC** where we build intelligent software products. We've developed **ForwardCast**, a project delivery platform with AI-assisted planning, and **DNSsecured**, a DNS security analysis toolkit.
 
 **What I do in everyday terms:**
 - Build AI systems that help businesses work smarter
-- Create software that predicts outcomes (like when your project will be done)
-- Design tools that understand and process large amounts of information
-- Lead a team building cutting-edge technology products
+- Develop software products that solve real operational problems
+- Create tools that analyze data and provide intelligent insights
+- Design reusable infrastructure and security solutions
 
 ---
 
@@ -87,9 +87,9 @@ while (problem_exists):
 ```
 [2020-PRESENT] $ init resolvora-llc --role=founder
 → Building AI-powered business solutions
-→ Leading ForwardCast product development
+→ Developing ForwardCast (project management platform)
 → Architecting cloud-native ML systems
-→ Growing from 0 to production-scale
+→ Working on innovative AI applications
 
 [2018-PRESENT] $ ./ai-specialist.sh
 → Designing & deploying ML models
@@ -136,13 +136,15 @@ while (problem_exists):
 $ ls -la ~/projects/
 
 drwxr-xr-x  resolvora-llc/
-drwxr-xr-x  forwardcast/
+drwxr-xr-x  forwardcast/      # Project delivery platform
+drwxr-xr-x  dnssecured/       # DNS security stack
 drwxr-xr-x  ai-research/
 drwxr-xr-x  open-source/
 ```
 
-**[Resolvora LLC](./projects)** - Software development company focused on AI-first solutions  
-**[ForwardCast](./projects)** - Next-gen project management powered by predictive analytics
+**[Resolvora LLC](./projects)** - Software development company building intelligent products  
+**[ForwardCast](./projects)** - Project delivery platform with AI-assisted planning and finance tools  
+**[DNSsecured](./projects)** - DNS security analysis stack with DNSSEC, DANE, SPF/DKIM/DMARC validation
 
 ---
 

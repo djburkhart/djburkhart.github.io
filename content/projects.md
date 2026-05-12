@@ -4,9 +4,9 @@ date: 2026-05-12
 draft: false
 ---
 
-## What I'm Building
+## What We Build
 
-**For everyone:** I create software that helps people work better. My projects use artificial intelligence to solve real business problems—like predicting when projects will finish or automating repetitive tasks. Below are my two main focuses.
+**For everyone:** At Resolvora LLC, we create software products that solve real operational problems. Our projects range from project delivery platforms to security analysis tools—all designed to make complex tasks simpler and more reliable.
 
 ---
 
@@ -14,8 +14,8 @@ draft: false
 $ ls -la ~/projects/
 total 2
 
-drwxr-xr-x  forwardcast/     # AI-powered project management
-drwxr-xr-x  resolvora-llc/   # Software innovation lab
+drwxr-xr-x  forwardcast/    # Project delivery platform
+drwxr-xr-x  dnssecured/     # DNS security stack
 ```
 
 ---
@@ -25,22 +25,16 @@ drwxr-xr-x  resolvora-llc/   # Software innovation lab
 ```
  _______________________________________________
 |                                               |
-|  ForwardCast Project Management               |
-|  Predict. Plan. Execute.                      |
+|  ForwardCast                                  |
+|  Project Delivery Platform                    |
 |_______________________________________________|
 ```
 
 ### **What It Does (Plain English)**
 
-Imagine you're planning a road trip. Traditional project management tools are like a map—they show you the route, but they can't tell you about traffic jams ahead or how long it'll actually take.
+ForwardCast is a platform for managing project delivery from planning through execution. Think of it as an intelligent workspace where teams can track projects, get AI suggestions for planning, and analyze finances—all in one place.
 
-**ForwardCast is like having a smart GPS** that:
-- Predicts when you'll really arrive (not just the optimistic estimate)
-- Warns you about roadblocks before you hit them
-- Suggests the best route based on real traffic patterns
-- Learns from every trip to get better at predicting
-
-Instead of teams guessing "this will take 2 weeks" and being wrong, ForwardCast analyzes past projects, team performance, and current progress to say "based on the data, this will likely finish on May 20th, with 89% confidence."
+**Real-world use:** Instead of juggling spreadsheets, email threads, and multiple tools, teams use ForwardCast to manage everything in dedicated workspaces with built-in intelligence.
 
 ---
 
@@ -48,89 +42,68 @@ Instead of teams guessing "this will take 2 weeks" and being wrong, ForwardCast 
 
 ```javascript
 const forwardcast = {
-  type: "SaaS Platform",
-  mission: "Make project management intelligent",
-  stack: ["AI/ML", "Real-time Sync", "Cloud-Native"],
+  type: "Multi-tenant SaaS Platform",
+  url: "app.forwardcast.io",
   status: "Production",
-  impact: "Helping teams deliver on time, every time"
+  deployment: "Kubernetes + PostgreSQL",
+  access: "Buyer storefront + dedicated customer workspaces"
 };
 ```
 
-Traditional PM tools track work. ForwardCast **predicts** it.
+A complete project delivery platform with buyer-facing storefront, dedicated customer workspaces, and serverless API infrastructure.
 
 ---
 
-### **The Problem**
+### **Core Capabilities**
 
-**In everyday terms:** Most projects run late. Teams say something will take "2 weeks" but it actually takes 6 weeks. Why? Because humans are terrible at estimating, we forget about dependencies, and we don't account for unexpected issues.
+**→ Project Delivery Workspace**
+- Complete project lifecycle management (create, update, archive)
+- Multiple views: Gantt charts, Kanban boards, calendars, forecasts
+- Team-scoped projects with organization support
+- Multiple project teams per organization
 
-**Statistics:**
-- 7 out of 10 projects miss their deadlines
-- Projects run an average of 3x longer than estimated
-- Millions of dollars wasted on poor planning
+**→ AI-Assisted Planning**
+- AI draft suggestions for project metadata (owner, phase, risk, budget, scope)
+- Reusable AI templates to prefill project scope forms
+- Historical recommendations from your team's past projects
+- Smart defaults based on project patterns
 
-```python
-# Traditional project management
-def estimate_deadline():
-    guess = input("When will this be done?")
-    reality = guess * 3  # Optimistic bias
-    return "We're behind schedule"
+**→ Finance Planning Tools**
+- Yearly forecast guidance from historical data
+- P&L (Profit & Loss) creation with flexible team scoping
+- Active-team, selected-team, or parent-company level reporting
+- CSV export for financial analysis
 
-# Result: 📊 70% of projects miss deadlines
-```
+**→ Multi-Tenant Architecture**
+- Buyer-account creation and plan selection
+- Dedicated instance provisioning per customer
+- Dedicated workspaces on `*.app.forwardcast.io` subdomains
+- Custom domain routing support
 
-Teams are flying blind with:
-- ❌ Unrealistic timelines
-- ❌ Resource allocation guesswork
-- ❌ Bottlenecks discovered too late
-- ❌ Risk assessment based on gut feeling
+**→ Authentication & Security**
+- Email verification for new accounts
+- TOTP (two-factor authentication) support
+- Session management
+- Case-insensitive email matching
+- Bootstrap admin account provisioning
 
----
+**→ Billing Integration**
+- Stripe Checkout subscription flow
+- Multiple billing tiers via Stripe lookup keys
+- Enterprise pricing options
+- Controlled billing bypass for testing
 
-### **The Solution**
+**→ Progressive Web App**
+- Installable as PWA on desktop and mobile
+- Service worker for offline capabilities
+- Cached static assets for fast repeat launches
+- Network-first for live data freshness
 
-```python
-# ForwardCast approach
-def predict_deadline(historical_data, team_velocity, dependencies):
-    ml_model = train_on_similar_projects(historical_data)
-    confidence_intervals = monte_carlo_simulation(team_velocity)
-    risk_factors = analyze_dependencies(dependencies)
-    
-    return {
-        "predicted_completion": "2026-06-15",
-        "confidence": "85%",
-        "risks": ["Backend dependency on Team B"],
-        "recommendation": "Add 1 senior dev to frontend"
-    }
-```
-
-**Core Features:**
-
-**→ Predictive Analytics Engine**
-```
-Input: Project scope, team data, historical patterns
-Output: Realistic timelines with confidence intervals
-Algorithm: Ensemble ML models + Monte Carlo simulation
-```
-
-**→ Real-Time Intelligence**
-- Task completion patterns
-- Team velocity tracking
-- Bottleneck detection
-- Resource optimization suggestions
-
-**→ Dependency Mapping**
-```mermaid
-Project A → depends_on → [Team B, Service C]
-         → blocks → [Project D, E, F]
-         → risk_level → HIGH
-```
-
-**→ Data-Driven Insights**
-- Sprint retrospective analytics
-- Burndown forecasting
-- Technical debt quantification
-- Team productivity heatmaps
+**→ Mobile Support**
+- Native iPhone app via Capacitor
+- Tenant-aware mobile experience
+- Preferred workspace saving
+- Direct dashboard access for executives
 
 ---
 
@@ -139,51 +112,244 @@ Project A → depends_on → [Team B, Service C]
 ```yaml
 Frontend:
   - React + TypeScript
-  - Real-time WebSocket updates
-  - Responsive design system
+  - Vite build system
+  - Progressive Web App
+  - Capacitor (iOS native shell)
 
 Backend:
-  - Node.js microservices
-  - Python ML pipeline
-  - GraphQL API
-
-AI/ML:
-  - TensorFlow for time series forecasting
-  - scikit-learn for classification
-  - Custom NLP for task analysis
+  - Serverless Node.js API
+  - PostgreSQL database
+  - Kubernetes deployment
+  - RESTful API design
 
 Infrastructure:
-  - Kubernetes orchestration
-  - PostgreSQL + TimescaleDB
-  - Redis caching
-  - AWS cloud deployment
+  - Multi-tenant routing
+  - Cloudflare DNS management
+  - Subdomain provisioning
+  - LoadBalancer service
 
-DevOps:
-  - CI/CD with GitHub Actions
-  - Infrastructure as Code
-  - Automated testing & deployment
+Integration:
+  - Stripe payment processing
+  - Email verification
+  - TOTP authentication
+  - API key management
 ```
 
 ---
 
-### **Key Metrics**
+### **Product URLs**
 
 ```
-📈 Accuracy Improvements:
-   ├─ Deadline prediction: 73% → 94% accurate
-   ├─ Resource forecasting: 2.3x more precise
-   └─ Risk detection: 68% earlier identification
+Production:
+├─ https://app.forwardcast.io        # Storefront & buyer signup
+├─ https://api.forwardcast.io        # Platform API
+└─ https://*.app.forwardcast.io      # Customer workspaces
 
-⚡ Performance:
-   ├─ Page load: <800ms
-   ├─ API response: <100ms p95
-   └─ Real-time sync: <50ms latency
-
-💼 Business Impact:
-   ├─ On-time delivery: +42%
-   ├─ Resource waste: -31%
-   └─ Planning time: -56%
+Example customer workspace:
+└─ https://acme.app.forwardcast.io
 ```
+
+---
+
+### **What Makes It Different**
+
+**Multi-tenant from day one:** Each customer gets their own dedicated workspace, not just a shared account.
+
+**AI where it matters:** Rather than generic AI everywhere, we focus AI on the painful parts—initial project scoping and budget estimation.
+
+**Finance-aware:** Built-in P&L and forecasting tools mean finance teams don't need separate spreadsheets.
+
+**Production-ready infrastructure:** Kubernetes, PostgreSQL, multi-region capable, with proper billing and auth from the start.
+
+---
+
+## `~/projects/dnssecured/`
+
+```
+  ____  _   _ ____                                      _ 
+ |  _ \| \ | / ___|___  ___  ___ _   _ _ __ ___  __| |
+ | | | |  \| \___ / __|/ _ \/ __| | | | '__/ _ \/ _` |
+ | |_| | |\  |___) \__|  __/ (__| |_| | | |  __/ (_| |
+ |____/|_| \_|____\___|\___|\___|\__,_|_|  \___|\__,_|
+                                                       
+  DNS Security Stack in Go
+```
+
+### **What It Does (Plain English)**
+
+DNSsecured analyzes the security configuration of email domains and DNS setups. It checks things like: Is DNSSEC enabled? Are email authentication records (SPF, DKIM, DMARC) configured correctly? Are SSL certificates valid?
+
+**Real-world use:** Email security platforms, domain registrars, and IT teams use it to automatically validate DNS security posture and catch misconfigurations before they cause problems.
+
+---
+
+### **Overview**
+
+```go
+type DNSsecured struct {
+    Type string  // "Reusable Go library + HTTP service"
+    Use  string  // "Embedded library OR standalone service"
+    For  string  // "DNS security validation and scoring"
+}
+```
+
+A library-first DNS security stack that can run as both an embedded library and a standalone HTTP service.
+
+---
+
+### **Security Checks**
+
+**→ DNS Infrastructure**
+- **NS Redundancy:** Analyzes authoritative nameserver redundancy (weak fault tolerance detection)
+- **DNSSEC Validation:** Checks DNSSEC signing and validation chain
+- **Resolver Health:** Tests DNS resolution reliability
+
+**→ Email Security**
+- **SPF:** Sender Policy Framework validation
+- **DKIM Selector Health:** Validates DKIM signing key configurations
+- **DMARC:** Checks email authentication policy
+- **MTA-STS:** Mail Transfer Agent Strict Transport Security
+- **TLS-RPT:** TLS reporting configuration
+
+**→ Transport Security**
+- **DANE/TLSA:** DNS-based Authentication of Named Entities
+- **TLS Certificate Posture:** Certificate expiry, validity, and modern TLS enforcement
+- **HTTPS Configuration:** Web server TLS posture
+
+**→ Brand Protection**
+- **BIMI:** Brand Indicators for Message Identification
+
+---
+
+### **Architecture**
+
+```
+Pluggable Check Pipeline:
+├─ Bounded concurrent execution
+├─ Replaceable DNS resolver layer (net.Resolver default)
+├─ Custom check support via WithChecks(...)
+├─ Performance tuning via WithTimeout(...) and WithMaxConcurrency(...)
+└─ Scoring model: posture score + normalized findings
+```
+
+**Why it's reusable:**
+- Runs as **embedded library** OR **standalone service**
+- Keeps proprietary logic separate while exposing infrastructure primitives
+- Production-grade hardening suitable for commercial platforms
+
+---
+
+### **API Endpoints**
+
+```
+HTTP Service:
+├─ GET  /healthz
+├─ POST /v1/scan                       # Compatibility endpoint
+├─ POST /v1/analyze                    # Preferred analysis
+├─ POST /v1/authoritative/validate     # Nameserver hardening
+├─ POST /v1/dnssec/plan                # DNSSEC rollover planning
+└─ POST /v1/steering/decision          # Traffic-steering decisions
+```
+
+**Request example:**
+```json
+{
+  "tenant_id": "public",
+  "domain": "example.com",
+  "dkim_selectors": ["s1", "default"]
+}
+```
+
+---
+
+### **Tech Stack**
+
+```yaml
+Language:
+  - Go (library-first design)
+  - Standard library focused
+  - Zero external dependencies for core
+
+Components:
+  - pkg/dnssecured/      # Core engine & checks
+  - pkg/authoritative/   # NS security validator
+  - pkg/dnssec/          # DNSSEC rollover planner
+  - pkg/steering/        # Traffic-steering engine
+  - cmd/dnssecured/      # Standalone HTTP runtime
+
+Resolver Support:
+  - System resolver (net.Resolver)
+  - UDP DNS
+  - DNS-over-TLS (DoT)
+  - DNS-over-HTTPS (DoH)
+  - Custom nameserver targeting
+  - TLS certificate pinning
+
+Configuration:
+  - Caddy-style DNSsecuredfile
+  - Environment variables
+  - Programmatic configuration
+```
+
+---
+
+### **CLI Commands**
+
+```bash
+# Caddy-style command interface
+dnssecured run --config ./DNSsecuredfile
+dnssecured validate --config ./DNSsecuredfile
+dnssecured list-checks
+dnssecured version
+
+# Default command (no args = run)
+dnssecured
+```
+
+---
+
+### **Library Embedding**
+
+```go
+// Embed in your Go application
+resolver := dnssecured.NewNetResolver()
+scanner := dnssecured.NewScanner(
+    resolver,
+    dnssecured.WithTimeout(8*time.Second),
+    dnssecured.WithMaxConcurrency(6),
+)
+
+result, err := scanner.Scan(ctx, dnssecured.ScanRequest{
+    TenantID: "public",
+    Domain:   "example.com",
+})
+
+// Result includes:
+// - Posture score
+// - Individual check results
+// - Normalized findings
+// - Actionable recommendations
+```
+
+---
+
+### **Recent Enhancements**
+
+**NS1-style Resilience:**  
+Added authoritative nameserver redundancy analysis to flag weak DNS fault tolerance—inspired by enterprise DNS platforms.
+
+**ZeroSSL-aligned SSL Control:**  
+Added HTTPS certificate posture validation for certificate expiry and modern TLS enforcement to support automated renewal operations.
+
+---
+
+### **Use Cases**
+
+- **Email security platforms:** Validate customer domain configurations
+- **Domain registrars:** Pre-flight security checks before domain transfer
+- **DevOps automation:** CI/CD pipeline security validation
+- **Security audits:** Automated compliance checking
+- **Traffic steering:** Health-aware DNS routing decisions
 
 ---
 
@@ -196,71 +362,28 @@ DevOps:
  |  _ <  __/\__ \ (_) | |\ V /  __/ | | (_| |
  |_| \_\___||___/\___/|_| \_/ \___|_|  \__,_|
                                               
- Software innovation at the AI frontier
+ Building intelligent software products
 ```
 
-### **What We Do (Plain English)**
+### **Company Overview**
 
-**Resolvora is my software company that builds smart business tools.**
-
-Think of us as a team that makes software "intelligent." Instead of just storing data or following rules, we create programs that:
-- Learn from patterns
-- Make predictions
-- Automate complex decisions
-- Handle tasks that normally require human judgment
-
-**Real-world example:** Instead of someone manually reviewing 1,000 customer support tickets to categorize them, we build AI that reads them all in seconds and automatically routes each one to the right department.
-
----
-
-### **Company Profile**
+**Resolvora LLC** is a software development company focused on building practical, intelligent tools that solve real operational problems.
 
 ```json
 {
   "name": "Resolvora LLC",
   "founded": "2020",
   "founder": "Daniel J. Burkhart",
-  "mission": "Build AI-first software that solves real problems",
+  "mission": "Build intelligent software that solves real problems",
+  "products": ["ForwardCast", "DNSsecured"],
   "focus": [
-    "AI/ML Development",
-    "SaaS Products",
-    "Enterprise Solutions",
-    "Process Automation"
+    "Multi-tenant SaaS platforms",
+    "DNS and email security",
+    "AI-assisted workflows",
+    "Reusable infrastructure"
   ]
 }
 ```
-
----
-
-### **What We Build**
-
-**AI-Powered Solutions**
-```python
-class ResolvораProduct:
-    def __init__(self):
-        self.ai_first = True
-        self.user_centric = True
-        self.production_ready = True
-    
-    def solve(self, problem):
-        if problem.requires_intelligence:
-            return self.apply_ml(problem)
-        return self.elegant_solution(problem)
-```
-
-We don't just add AI for the sake of AI. We identify problems where **intelligence creates genuine value**:
-
-**→ Predictive Systems**  
-Time series forecasting, anomaly detection, pattern recognition
-
-**→ Natural Language Processing**  
-Document analysis, sentiment scoring, intelligent search
-
-**→ Process Automation**  
-Workflow optimization, intelligent routing, decision automation
-
-**→ Data Intelligence**  
-Analytics platforms, recommendation engines, insight generation
 
 ---
 
@@ -268,31 +391,26 @@ Analytics platforms, recommendation engines, insight generation
 
 ```bash
 #!/bin/bash
-# Our approach to building software
+# How we build software
 
-validate_problem() {
-    # Does this actually need to be built?
-    # Will people pay for this solution?
-    # Can we build it better than alternatives?
+build_for_production() {
+    # Multi-tenant from day one
+    # Real authentication and billing
+    # Kubernetes-ready infrastructure
+    # Reusable libraries, not monoliths
 }
 
-architect_for_scale() {
-    # Design for 10x current load
-    # Microservices where it makes sense
-    # Monolith where it doesn't
+use_ai_strategically() {
+    # AI where it adds real value (planning, suggestions)
+    # Not AI for the sake of AI
+    # Practical intelligence over hype
 }
 
-ship_iteratively() {
-    # MVP → Learn → Iterate
-    # Ship weekly, not yearly
-    # Perfect is the enemy of shipped
-}
-
-maintain_excellence() {
-    # Code review everything
-    # Test coverage > 80%
-    # Documentation is not optional
-    # Technical debt is real debt
+ship_real_products() {
+    # Production-deployed, not demos
+    # Real customers, real domains
+    # Actual billing and provisioning
+    # Built to scale
 }
 ```
 
@@ -301,127 +419,39 @@ maintain_excellence() {
 ### **Technology Expertise**
 
 ```
-AI/ML Stack:
-├── TensorFlow, PyTorch, scikit-learn
-├── Hugging Face Transformers
-├── LangChain, OpenAI API
-└── MLflow, Weights & Biases
-
-Backend:
-├── Python (FastAPI, Django)
-├── Node.js (Express, NestJS)
-├── Go (when performance matters)
-└── PostgreSQL, Redis, MongoDB
-
-Frontend:
-├── React + TypeScript
-├── Next.js
-├── Tailwind CSS
-└── Real-time with WebSockets
+Product Stack:
+├── React + TypeScript (modern web UIs)
+├── Go (high-performance services & libraries)
+├── Node.js (serverless APIs)
+├── PostgreSQL (reliable data persistence)
+└── Kubernetes (production orchestration)
 
 Infrastructure:
-├── Docker + Kubernetes
-├── AWS, Azure, GCP
-├── Terraform, Ansible
-└── GitHub Actions, CircleCI
+├── Multi-tenant architecture
+├── Cloudflare DNS management
+├── Stripe billing integration
+├── Progressive Web Apps
+└── Mobile (Capacitor/iOS)
+
+AI/ML:
+├── AI-assisted planning
+├── Historical pattern analysis
+├── Smart template generation
+└── Recommendation engines
 ```
 
 ---
 
-### **Current Focus**
-
-```python
-projects = {
-    "forwardcast": {
-        "status": "production",
-        "next": ["Advanced analytics", "Team insights", "API v2"]
-    },
-    "ai_research": {
-        "status": "ongoing",
-        "areas": ["LLM applications", "Retrieval-augmented generation"]
-    },
-    "open_source": {
-        "status": "active",
-        "contributions": "Building tools the community needs"
-    }
-}
-```
-
----
-
-### **Values**
-
-```
-1. Innovation over Imitation
-   → Build what doesn't exist yet
-   → Question the status quo
-   → Take calculated risks
-
-2. Impact over Features
-   → Ship what users need
-   → Measure real outcomes
-   → Delete more than we add
-
-3. Excellence over Speed
-   → Fast code that works > Fast code that breaks
-   → Readable > Clever
-   → Sustainable > Shortcuts
-
-4. Open over Closed
-   → Share learnings
-   → Contribute to community
-   → Build in public where possible
-```
-
----
-
-## `~/projects/open-source/`
-
-```bash
-$ git log --author="Daniel Burkhart" --all --oneline
-
-# Contributions to:
-→ Machine learning tooling
-→ Developer productivity tools
-→ Documentation improvements
-→ Bug fixes and feature additions
-
-# Philosophy:
-# "Use open source? Contribute back."
-```
-
----
-
-## `~/projects/future/`
-
-```javascript
-const roadmap = {
-  q2_2026: [
-    "ForwardCast mobile app",
-    "Advanced AI features",
-    "Enterprise integrations"
-  ],
-  exploring: [
-    "Multi-agent AI systems",
-    "Real-time collaboration tools",
-    "Developer productivity SaaS"
-  ],
-  always: "Learning, building, shipping"
-};
-```
-
----
-
-## **Interested in Collaborating?**
+## **Want to Learn More?**
 
 ```bash
 $ ./contact.sh
 
-# I'm always excited to discuss:
-→ AI/ML projects with real-world impact
-→ Technical co-founding opportunities
-→ Consulting on AI strategy & architecture
-→ Open source collaborations
+# Interested in:
+→ ForwardCast for your team
+→ DNSsecured for email security validation
+→ Building similar systems
+→ Technical collaboration
 
 Email: me@danielburkhart.com
 GitHub: https://github.com/djburkhart
@@ -433,5 +463,5 @@ Twitter/X: https://x.com/DannyBurkhart
 
 ```bash
 $ exit
-# More projects in the pipeline. Stay tuned.
+# Two products. Both solving real problems. Both in production.
 ```

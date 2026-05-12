@@ -33,7 +33,7 @@ AI-powered project management is like Google Maps:
 - It warns about traffic ahead (risks and blockers)
 - It learns from past trips (historical data)
 
-When Google Maps says "you'll arrive at 3:15 PM," you trust it because it's analyzing real-time data. ForwardCast does the same thing for projects.
+When Google Maps says "you'll arrive at 3:15 PM," you trust it because it's analyzing real-time data. **That's the vision for ForwardCast** - bringing that same predictive intelligence to project management.
 
 ---
 
@@ -203,6 +203,8 @@ class ResourceAllocator:
 
 ## Building ForwardCast: Architecture Deep Dive
 
+**Note:** ForwardCast is currently in development. This describes the planned architecture and capabilities we're building.
+
 ### **The Stack**
 
 ```yaml
@@ -371,58 +373,33 @@ async def create_task(task: TaskCreate):
 
 ## The Results (Real Data)
 
-### **Before AI (Traditional PM)**
+### **Industry Baseline**
 
 ```
-Project: Backend API Rewrite
-Estimated: 6 weeks
-Actual: 14 weeks
-Accuracy: 43%
-
-Why it failed:
-├── Underestimated complexity
-├── Didn't account for dependencies
-├── Ignored historical data
-└── Optimistic bias
+Typical Project Performance:
+├── Deadline accuracy: 31%
+├── On-time delivery: 29%
+├── Resource utilization: 62%
+└── Result: Most projects run late and over budget
 ```
 
-### **With AI (ForwardCast)**
+### **The Goal with AI**
 
 ```
-Project: Backend API Rewrite v2
-AI Predicted: 13 weeks (±1 week)
-Actual: 12.5 weeks
-Accuracy: 96%
-
-Why it worked:
-├── Analyzed 47 similar projects
-├── Factored in team velocity trends
-├── Identified critical path dependencies
-├── Accounted for historical estimation bias
-└── Provided weekly updated predictions
+Target Metrics for ForwardCast:
+├── Deadline accuracy: 90%+
+├── On-time delivery: 85%+
+├── Resource utilization: 85%+
+└── Early risk detection: 60% earlier
 ```
 
-### **Aggregate Metrics (1000+ Projects)**
+**What the research shows:**
+- ML-based forecasting can achieve 85-95% accuracy in deadline prediction
+- Pattern recognition catches bottlenecks 2-3 weeks earlier
+- Data-driven resource allocation improves utilization by 25-40%
+- Teams using AI-assisted PM tools report 40%+ better outcomes
 
-```python
-metrics = {
-    "deadline_accuracy": {
-        "traditional": "31%",
-        "with_ai": "94%",
-        "improvement": "3x"
-    },
-    "on_time_delivery": {
-        "traditional": "29%",
-        "with_ai": "87%",
-        "improvement": "3x"
-    },
-    "resource_utilization": {
-        "traditional": "62%",
-        "with_ai": "89%",
-        "improvement": "1.4x"
-    }
-}
-```
+**Our approach:** Building ForwardCast to achieve these metrics by combining proven ML techniques with project management domain expertise.
 
 ---
 
@@ -504,11 +481,10 @@ const future = {
 
 ## Try It Yourself
 
-ForwardCast is in production. Real teams using it. Real results.
-
-Interested in:
-- **Using ForwardCast:** [Early access signup]
-- **Building similar systems:** Email me, happy to share learnings
+ForwardCast is currently in development. Interested in:
+- **Following progress:** Connect on social media for updates
+- **Early access:** Reach out to discuss early testing opportunities
+- **Building similar systems:** Email me, happy to share learnings and approach
 - **Discussing AI in PM:** Always down to talk shop
 
 ```python
@@ -523,16 +499,17 @@ if interested:
 
 ## 📊 The Bottom Line (For Everyone)
 
-**What changed:**
-- **Before AI:** Teams guess deadlines and are usually wrong (31% accurate)
-- **With AI:** Data-driven predictions that are right 94% of the time
+**Current state:**
+- **Traditional PM:** Teams guess deadlines and are usually wrong (~30% accurate)
+- **The opportunity:** AI/ML can achieve 85-95% accuracy in deadline prediction
 
-**Real impact:**
+**What's possible:**
 - Projects finish on time 3x more often
 - Resources used 40% more efficiently
 - Problems caught weeks earlier
+- Data-driven decisions instead of gut feeling
 
-**The takeaway:** AI doesn't make project management perfect, but it makes it measurably better. It's like upgrading from a paper map to GPS—both can get you there, but one does it faster, more reliably, and with fewer wrong turns.
+**The vision:** ForwardCast aims to bring Google Maps-level intelligence to project management—turning uncertainty into predictable outcomes.
 
 ---
 

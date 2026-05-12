@@ -43,19 +43,19 @@
                 return `
 <div class="output-success">About Daniel J. Burkhart</div>
 <div class="output-text">
-I'm a developer specializing in <strong>AI development</strong> with a passion for
-building innovative software solutions that solve real-world problems.
+I'm a developer specializing in <strong>AI development</strong> and building
+intelligent software products that solve real operational problems.
 
-<strong>Role:</strong> AI Development Specialist
-<strong>Company:</strong> Founder & Creator of Resolvora LLC
-<strong>Products:</strong> ForwardCast Project Management Software
+<strong>Role:</strong> Founder, Resolvora LLC
+<strong>Products:</strong> ForwardCast (project delivery platform), DNSsecured (DNS security stack)
+<strong>Focus:</strong> Multi-tenant SaaS, AI-assisted workflows, security tools
 
 <strong>Expertise:</strong>
-  • Machine Learning & Deep Learning
-  • Natural Language Processing
-  • AI-powered automation and intelligent systems
-  • Integration of AI technologies into business applications
-  • Generative AI and large language models
+  • Machine Learning & AI-assisted features
+  • Multi-tenant SaaS architecture
+  • DNS and email security
+  • Go and TypeScript/React development
+  • Production Kubernetes deployment
 
 <a href="/about">Read more →</a>
 </div>
@@ -67,29 +67,28 @@ building innovative software solutions that solve real-world problems.
             description: 'View projects',
             execute: () => {
                 return `
-<div class="output-success">Projects</div>
+<div class="output-success">Resolvora LLC Projects</div>
 <div class="output-text">
-<strong>1. ForwardCast Project Management</strong>
-   Next-generation project management software leveraging AI-powered
-   analytics to predict project timelines and resource needs.
+<strong>1. ForwardCast</strong> (app.forwardcast.io)
+   Project delivery platform with AI-assisted planning and finance tools.
 
-   Key Features:
-   • Intelligent forecasting with ML algorithms
-   • Real-time collaboration tools
-   • Advanced planning with dependency tracking
-   • Data-driven insights and analytics
+   • Multi-tenant SaaS (dedicated customer workspaces)
+   • AI draft suggestions for project scoping
+   • P&L and financial forecasting
+   • Gantt, Kanban, calendar views
+   • Stripe billing + PWA + iOS app
+   • Production: Kubernetes + PostgreSQL
 
-<strong>2. Resolvora LLC</strong>
-   Software development company focused on creating innovative solutions
-   at the intersection of AI and practical business applications.
+<strong>2. DNSsecured</strong>
+   DNS security analysis stack in Go (library + HTTP service).
 
-   Focus Areas:
-   • Custom AI solutions for business needs
-   • Project management tools
-   • Enterprise applications
-   • Process automation
+   • DNSSEC, DANE/TLSA, SPF/DKIM/DMARC validation
+   • NS redundancy + TLS certificate posture
+   • Embeddable library or standalone service
+   • Traffic-steering and DNSSEC rollover planning
+   • Caddy-style CLI + HTTP API
 
-<a href="/projects">View all projects →</a>
+<a href="/projects">View detailed specs →</a>
 </div>
                 `;
             }
@@ -101,31 +100,32 @@ building innovative software solutions that solve real-world problems.
                 return `
 <div class="output-success">Technical Skills & Expertise</div>
 <div class="output-text">
-<strong>AI & Machine Learning:</strong>
-  • TensorFlow, PyTorch, scikit-learn
-  • Natural Language Processing (NLP)
-  • Computer Vision
-  • Generative AI & LLMs
-  • Model training and deployment
+<strong>Product Development:</strong>
+  • Multi-tenant SaaS architecture
+  • Progressive Web Apps (PWA)
+  • Mobile apps (Capacitor/iOS)
+  • Payment integration (Stripe)
+  • Kubernetes deployment
 
 <strong>Programming Languages:</strong>
-  • Python (Advanced)
-  • JavaScript/TypeScript
-  • Go
-  • SQL
+  • Go (DNS security, high-performance services)
+  • TypeScript/JavaScript (React, Node.js)
+  • Python (AI/ML, data analysis)
+  • SQL (PostgreSQL)
 
 <strong>Frameworks & Tools:</strong>
-  • React, Node.js, Hugo
-  • Docker, Kubernetes
-  • AWS, Azure, GCP
-  • Git, CI/CD pipelines
+  • React + Vite
+  • Node.js serverless APIs
+  • Go standard library
+  • Kubernetes + Docker
+  • Cloudflare DNS
 
 <strong>Specializations:</strong>
-  • AI system architecture
-  • Cloud-native development
-  • Microservices architecture
-  • API design and development
-  • Database design and optimization
+  • DNS and email security (DNSSEC, SPF/DKIM/DMARC)
+  • AI-assisted planning and recommendations
+  • Library-first architecture design
+  • Production SaaS deployment
+  • Billing and multi-tenancy
 </div>
                 `;
             }
@@ -137,21 +137,23 @@ building innovative software solutions that solve real-world problems.
                 return `
 <div class="output-success">Professional Experience</div>
 <div class="output-text">
-<strong>Founder & CEO - Resolvora LLC</strong>
+<strong>Founder - Resolvora LLC</strong>
 2020 - Present
 
-  • Founded software development company specializing in AI solutions
-  • Lead development of ForwardCast Project Management platform
-  • Built and managed cross-functional development teams
-  • Architected cloud-native AI-powered applications
+  • Built and deployed ForwardCast (multi-tenant project delivery platform)
+  • Developed DNSsecured (DNS security analysis stack in Go)
+  • Architected Kubernetes-based SaaS infrastructure
+  • Integrated Stripe billing, auth, and customer provisioning
+  • Shipped production PWA + iOS mobile app
 
-<strong>AI Development Specialist</strong>
+<strong>Software Developer & AI Specialist</strong>
 2018 - Present
 
-  • Designed and implemented ML models for various applications
-  • Integrated AI technologies into business workflows
-  • Consulted on AI strategy and implementation
-  • Developed NLP and computer vision solutions
+  • Full-stack development (Go, TypeScript/React, Node.js)
+  • DNS and email security implementation
+  • AI-assisted planning features
+  • Multi-tenant architecture design
+  • Production deployment and operations
 
 <a href="/about">View full experience →</a>
 </div>
